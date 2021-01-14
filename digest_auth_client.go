@@ -141,7 +141,7 @@ func (dr *DigestRequest) executeNewDigest(resp *http.Response) (resp2 *http.Resp
 		return nil, err
 	}
 
-	if resp2, err = dr.executeRequest(auth.toString()); err != nil {
+	if resp2, err = dr.executeRequest(auth.ToString()); err != nil {
 		return nil, err
 	}
 
@@ -157,7 +157,7 @@ func (dr *DigestRequest) executeExistingDigest() (resp *http.Response, err error
 	}
 	dr.Auth = auth
 
-	return dr.executeRequest(dr.Auth.toString())
+	return dr.executeRequest(dr.Auth.ToString())
 }
 
 func (dr *DigestRequest) executeRequest(authString string) (resp *http.Response, err error) {

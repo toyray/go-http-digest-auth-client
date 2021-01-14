@@ -134,7 +134,7 @@ func (ah *authorization) hash(a string) string {
 	return hex.EncodeToString(h.Sum(nil))
 }
 
-func (ah *authorization) toString() string {
+func (ah *authorization) ToString() string {
 	var buffer bytes.Buffer
 
 	buffer.WriteString("Digest ")
